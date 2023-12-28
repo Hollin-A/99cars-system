@@ -1,12 +1,29 @@
-import React from 'react';
-import './App.css';
+import React from "react";
+import "./App.css";
+
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+// importing layouts
+import RootLayout from "./layouts/RootLayout";
+
+// importing pages
+import Home from "./pages/Home";
 
 function App() {
-  return (
-    <div className="App">
-Hello world
-    </div>
-  );
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <RootLayout />,
+      children: [
+        {
+          path: "/",
+          element: <Home />,
+        },
+      ],
+    },
+  ]);
+
+  return <RouterProvider router={router} />;
 }
 
 export default App;
