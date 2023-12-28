@@ -2,7 +2,7 @@ import React from "react";
 
 import { NavLink } from "react-router-dom";
 
-import { HomeIcon, InventoryIcon, SettingsIcon, InsightsIcon } from "./icons";
+import { HomeIcon, CatalogIcon, SettingsIcon, InsightsIcon } from "./icons";
 
 import { sidebar } from "../config/site";
 
@@ -12,6 +12,8 @@ const renderIconComponent = (name: string) => {
   switch (name) {
     case "home":
       return <HomeIcon />;
+    case "catalog":
+      return <CatalogIcon />;
     case "insights":
       return <InsightsIcon />;
     case "settings":

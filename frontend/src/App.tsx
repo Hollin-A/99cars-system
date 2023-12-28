@@ -10,6 +10,7 @@ import RootLayout from "./layouts/RootLayout";
 import Home from "./pages/Home";
 import Insights from "./pages/Insights";
 import Settings from "./pages/Settings";
+import Catalog from "./pages/Catalog";
 
 function App(): JSX.Element {
   const router = createBrowserRouter([
@@ -20,6 +21,10 @@ function App(): JSX.Element {
         {
           path: "/",
           element: <Home />,
+        },
+        {
+          path: "/catalog",
+          element: <Catalog />,
         },
         {
           path: "/insights",
