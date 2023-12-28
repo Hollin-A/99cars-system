@@ -17,7 +17,7 @@ const RootLayout = (props: Props) => {
       <NavBar />
       <div className="flex w-full" style={{ height: `${bodyHeight}px` }}>
         <SideBar />
-        <div className="h-full overflow-auto w-full">
+        <div className="h-full overflow-auto w-full bg-light/10">
           <Outlet />
         </div>
       </div>

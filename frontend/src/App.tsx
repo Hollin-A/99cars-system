@@ -8,8 +8,10 @@ import RootLayout from "./layouts/RootLayout";
 
 // importing pages
 import Home from "./pages/Home";
+import Insights from "./pages/Insights";
+import Settings from "./pages/Settings";
 
-function App() {
+function App(): JSX.Element {
   const router = createBrowserRouter([
     {
       path: "/",
@@ -18,6 +20,14 @@ function App() {
         {
           path: "/",
           element: <Home />,
+        },
+        {
+          path: "/insights",
+          element: <Insights />,
+        },
+        {
+          path: "/settings",
+          element: <Settings />,
         },
       ],
     },
