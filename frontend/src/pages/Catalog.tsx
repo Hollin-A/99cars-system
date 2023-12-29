@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
+import axios from "axios";
+
+import AddVehicleModal from "../modals/AddVehicleModal";
 import Title from "../components/Title";
 
 import { BASE_URL } from "../config/apiConfig";
 
 import { IVehicle } from "../types";
-import axios from "axios";
 
 const tableHeaders: string[] = [
   "code",
@@ -47,7 +49,11 @@ const Catalog = (props: Props) => {
   return (
     <div className="">
       <Title title="vehicle catalog" />
-      <div className="mt-5">
+      <div className="my-5 flex items-center justify-between">
+        <p className="font-semibold">Total Vehicles : {vehicles.length}</p>
+        <AddVehicleModal />
+      </div>
+      <div className="">
         <div className="bg-white grid grid-cols-5 p-3 rounded-xl border border-light">
           {tableHeaders.map((item) => (
             <div className="" key={item}>
