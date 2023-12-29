@@ -1,8 +1,11 @@
-export interface vehicle {
+export interface IVehicle {
   _id: string;
   code: string;
   brand: string;
-  model: string;
-  registraion: string;
+  brandModel: string;
+  registration: string;
   color: string;
+  createDate: Date;
+  updatedDate: Date;
+  _v: number;
 }
