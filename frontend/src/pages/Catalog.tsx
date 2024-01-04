@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 import AddVehicleModal from "../modals/AddVehicleModal";
+import EditVehicleModal from "../modals/EditVehicleModal";
+import DeleteVehicleModal from "../modals/DeleteVehicleModal";
 import Title from "../components/Title";
 
 import { BASE_URL } from "../config/apiConfig";
@@ -54,7 +56,7 @@ const Catalog = (props: Props) => {
         <AddVehicleModal />
       </div>
       <div className="">
-        <div className="bg-white grid grid-cols-5 p-3 rounded-xl border border-light">
+        <div className="bg-white grid grid-cols-6 p-3 rounded-xl border border-light">
           {tableHeaders.map((item) => (
             <div className="" key={item}>
               <p className="capitalize font-semibold">{item}</p>
@@ -63,7 +65,7 @@ const Catalog = (props: Props) => {
         </div>
         <div className="bg-white rounded-xl border border-light mt-3">
           {vehicles.map((vehicle) => (
-            <div className="grid grid-cols-5 p-3" key={vehicle._id}>
+            <div className="grid grid-cols-6 p-3" key={vehicle._id}>
               <div className="">
                 <p className="uppercase">{vehicle.code}</p>
               </div>
@@ -78,6 +80,10 @@ const Catalog = (props: Props) => {
               </div>
               <div className="">
                 <p className="capitalize">{vehicle.color}</p>
+              </div>
+              <div className="flex items-center justify-center gap-3">
+                <EditVehicleModal _id={vehicle._id} />
+                <DeleteVehicleModal _id={vehicle._id} />
               </div>
             </div>
           ))}
