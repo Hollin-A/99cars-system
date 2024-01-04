@@ -102,6 +102,7 @@ const AddVehicleModal = (props: Props) => {
                         value={code}
                         onChange={(e) => setCode(e.target.value)}
                         placeholder="99C1007"
+                        type="text"
                       />
                     </div>
                     <div className="">
@@ -111,6 +112,7 @@ const AddVehicleModal = (props: Props) => {
                         value={brand}
                         onChange={(e) => setBrand(e.target.value)}
                         placeholder="Toyota"
+                        type="text"
                       />
                     </div>
                     <div className="">
@@ -120,6 +122,7 @@ const AddVehicleModal = (props: Props) => {
                         value={brandModel}
                         onChange={(e) => setBrandModel(e.target.value)}
                         placeholder="Axio"
+                        type="text"
                       />
                     </div>
                     <div className="">
@@ -131,6 +134,7 @@ const AddVehicleModal = (props: Props) => {
                         value={registration}
                         onChange={(e) => setRegistration(e.target.value)}
                         placeholder="BHS 5567"
+                        type="text"
                       />
                     </div>
                     <div className="">
@@ -140,6 +144,7 @@ const AddVehicleModal = (props: Props) => {
                         value={color}
                         onChange={(e) => setColor(e.target.value)}
                         placeholder="Pearl White"
+                        type="text"
                       />
                     </div>
                   </div>

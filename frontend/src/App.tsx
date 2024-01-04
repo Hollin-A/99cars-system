@@ -7,6 +7,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import RootLayout from "./layouts/RootLayout";
 
 // importing pages
+import Login from "./pages/Login";
 import Home from "./pages/Home";
 import Insights from "./pages/Insights";
 import Settings from "./pages/Settings";
@@ -14,6 +15,14 @@ import Catalog from "./pages/Catalog";
 
 function App(): JSX.Element {
   const router = createBrowserRouter([
+    {
+      path: "/login",
+      element: <Login />,
+    },
+    // {
+    //   path: "/register",
+    //   element: <Login />,
+    // },
     {
       path: "/",
       element: <RootLayout />,
