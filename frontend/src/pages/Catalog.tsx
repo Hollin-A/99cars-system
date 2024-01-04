@@ -6,7 +6,7 @@ import Title from "../components/Title";
 
 import { BASE_URL } from "../config/apiConfig";
 
-import { IVehicle } from "../types";
+import { Vehicle } from "../types";
 
 const tableHeaders: string[] = [
   "code",
@@ -20,7 +20,7 @@ type Props = {};
 
 const Catalog = (props: Props) => {
   const [loading, setLoading] = useState<boolean>(false);
-  const [vehicles, setVehicles] = useState<IVehicle[]>([]);
+  const [vehicles, setVehicles] = useState<Vehicle[]>([]);
 
   useEffect(() => {
     const getVehicles = async () => {

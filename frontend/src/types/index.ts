@@ -1,4 +1,4 @@
-export interface IVehicle {
+export interface Vehicle {
   _id: string;
   code: string;
   brand: string;
