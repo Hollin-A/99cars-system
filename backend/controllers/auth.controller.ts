@@ -19,11 +19,7 @@ const registerUser = async (req: Request, res: Response): Promise<void> => {
     email: req.body.email,
     password: req.body.password,
   });
-
-  const token = jwt.sign({ email: req.body.email }, SECRET_KEY, {
-    expiresIn: "24h",
-  });
-  res.status(200).send({ token: token, username: req.body.userName });
+  res.status(200).json({ message: "Successsfully Registered" });
 };
 
 const authenticateUser = (req: Request, res: Response, next: NextFunction) => {

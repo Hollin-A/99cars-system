@@ -49,10 +49,7 @@ const registerUser = (req, res) => __awaiter(void 0, void 0, void 0, function* (
         email: req.body.email,
         password: req.body.password,
     });
-    const token = jwt.sign({ email: req.body.email }, SECRET_KEY, {
-        expiresIn: "24h",
-    });
-    res.status(200).send({ token: token, username: req.body.userName });
+    res.status(200).json({ message: "Successsfully Registered" });
 });
 exports.registerUser = registerUser;
 const authenticateUser = (req, res, next) => {
