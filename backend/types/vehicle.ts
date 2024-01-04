@@ -1,6 +1,6 @@
 import { Document } from "mongoose";
 
-export interface IVehicle extends Document {
+export interface Vehicle extends Document {
   code: string;
   brand: string;
   brandModel: string;

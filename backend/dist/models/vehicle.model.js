@@ -10,6 +10,5 @@ const VehicleSchema = new mongoose_1.Schema({
     color: { type: String, required: true },
     createDate: { type: Date, default: Date.now },
     updatedDate: { type: Date, default: Date.now },
-    timestamps: { createDate: Date, updatedDate: Date },
-});
+}, { timestamps: true });
 exports.VehicleModel = (0, mongoose_1.model)("vehicles", VehicleSchema);
